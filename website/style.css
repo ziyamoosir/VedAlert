@@ -1,0 +1,204 @@
+body {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  margin: 20px;
+  background: linear-gradient(135deg, #e8f5e9, #ffffff);
+  color: #333;
+}
+
+header {
+  position: fixed; /* Keep header at the top */
+  top: 10px;
+  left: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 10; /* Ensure header is on top */
+}
+
+.vedalert {
+  color: #4caf50;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#clock {
+  font-size: 16px;
+  background: #4caf50;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically on smaller screens */
+  align-items: center;
+  max-width: 1000px;
+  margin: auto;
+  gap: 20px;
+  padding-top: 80px; /* Space for the fixed header */
+}
+
+.chart-section {
+  width: 100%;
+  text-align: center;
+}
+
+.chart-container {
+  padding: 15px;
+  border-radius: 12px;
+  background: rgba(76, 175, 80, 0.1);
+  box-shadow: 0 4px 10px rgba(76, 175, 80, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+canvas {
+  width: 100% !important;
+  height: auto !important;
+  max-width: 800px; /* Limit chart width on larger screens */
+}
+
+.stats-box {
+  margin-top: 20px;
+  font-size: 18px;
+  background: rgba(76, 175, 80, 0.2);
+  padding: 15px;
+  border-radius: 8px;
+  display: inline-block;
+  box-shadow: 0 2px 8px rgba(76, 175, 80, 0.2);
+  backdrop-filter: blur(5px);
+  text-align: left;
+  color: #333;
+}
+
+.disease-alert {
+  width: 100%;
+  padding: 15px;
+  border-radius: 15px;
+  background: rgba(76, 175, 80, 0.1);
+  box-shadow: 0 4px 10px rgba(76, 175, 80, 0.3);
+  backdrop-filter: blur(8px);
+  text-align: left;
+  max-width: 400px;
+}
+
+.disease-alert h3 {
+  color: #4caf50;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.disease-alert p {
+  font-size: 16px;
+  color: #555;
+}
+
+.disease-alert ul {
+  list-style: none;
+  padding: 0;
+}
+
+.disease-alert li {
+  margin: 8px 0;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .disease-alert {
+    margin-top: 20px; /* Add space above alert on small screens */
+  }
+
+  h2 {
+    font-size: 3em; /* Reduce heading size */
+  }
+
+  .stats-box {
+    font-size: 16px; /* Reduce stats font size */
+  }
+}
+@media (min-width: 1601px) {
+  body {
+    font-size: 16px; /* Adjust base font size if needed */
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #e8f5e9, #ffffff);
+    color: #333;
+  }
+
+  header {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+  }
+
+  .vedalert {
+    font-size: 28px;
+  }
+
+  #clock {
+    font-size: 18px;
+    padding: 6px 12px;
+  }
+
+  .container {
+    max-width: 1200px; /* Adjust max width for larger screens */
+    margin: 100px auto 40px; /* Adjust margins for larger screens */
+    padding: 30px;
+  }
+
+  .chart-section {
+    width: 70%; /* Adjust chart section width */
+    margin-right: 30px; /* Add space between chart and alert */
+  }
+
+  .chart-container {
+    padding: 20px;
+    border-radius: 50px;
+  }
+
+  canvas {
+    max-width: 900px; /* Adjust canvas size */
+  }
+
+  .stats-box {
+    margin-top: 30px;
+    font-size: 28px;
+    width: 500px;
+    height: 300px;
+    margin-left: -550px; /* Adjust stats box position */
+  }
+
+  .disease-alert {
+    width: 250px;
+    height: 300px;
+    margin-top: 900px;
+    margin-left: -30em; /* Adjust disease alert position */
+  }
+
+  h2 {
+    font-size: 6em;
+    width: 12em;
+    margin-left: 100px;
+  }
+
+  .disease-alert h3 {
+    font-size: 24px;
+  }
+
+  .disease-alert p {
+    font-size: 18px;
+  }
+
+  .disease-alert li {
+    font-size: 18px;
+  }
+}
